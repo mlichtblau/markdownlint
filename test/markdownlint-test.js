@@ -1100,7 +1100,7 @@ module.exports.missingStringValue = function missingStringValue(test) {
 };
 
 module.exports.readme = function readme(test) {
-  test.expect(113);
+  test.expect(115);
   const tagToRules = {};
   rules.forEach(function forRule(rule) {
     rule.tags.forEach(function forTag(tag) {
@@ -1169,7 +1169,7 @@ module.exports.readme = function readme(test) {
 };
 
 module.exports.doc = function doc(test) {
-  test.expect(328);
+  test.expect(336);
   fs.readFile("doc/Rules.md", helpers.utf8Encoding,
     function readFile(err, contents) {
       test.ifError(err);
@@ -1937,7 +1937,7 @@ module.exports.configBadHybridSync = function configBadHybridSync(test) {
 
 module.exports.allBuiltInRulesHaveValidUrl =
   function allBuiltInRulesHaveValidUrl(test) {
-    test.expect(129);
+    test.expect(132);
     rules.forEach(function forRule(rule) {
       test.ok(rule.information);
       test.ok(Object.getPrototypeOf(rule.information) === URL.prototype);
